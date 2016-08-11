@@ -1,0 +1,49 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/08/04 10:16:37 by bmalepla          #+#    #+#             */
+/*   Updated: 2016/08/08 11:56:02 by bmalepla         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int		ft_putchar(char c);
+
+void	 ft_print_combn(int nb)
+{
+    char buff[1000];
+    char nbr[] = "0123456789";
+    int cmptr;
+    int tmp;
+    int fnl;
+    int base;
+    
+    cmptr =0;
+    tmp = 0;
+    fnl = 0;
+    base = 10;
+    
+    if (nb < 0)
+    {
+        fnl++;
+        ft_putchar('-');
+    }
+    while (nb != 0)
+    {
+        tmp = nb % base;
+        tmp = (tmp < 0) ? -tmp : tmp;
+        buff[cmptr] = nbr[tmp];
+        cmptr++;
+        nb /= base;
+    }
+    while (cmptr >= 0)
+    {
+        ft_putchar(buff[cmptr]);
+        cmptr--;
+    }
+    
+    
+}

@@ -1,0 +1,52 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/08/04 10:16:37 by bmalepla          #+#    #+#             */
+/*   Updated: 2016/08/08 11:56:02 by bmalepla         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int		ft_putchar(char c);
+
+int		g_nbrs[4] = {0, 0, 0, 1};
+
+void	ft_putcomb(void)
+{
+	ft_putchar(g_nbrs[0] + 48);
+	ft_putchar(g_nbrs[1] + 48);
+	ft_putchar(' ');
+	ft_putchar(g_nbrs[2] + 48);
+	ft_putchar(g_nbrs[3] + 48);
+	if (!((g_nbrs[0] == 9) && (g_nbrs[1] == 8)))
+	{
+		ft_putchar(',');
+		ft_putchar(' ');
+	}
+}
+
+void	ft_print_comb2(void)
+{
+	while (!((g_nbrs[0] == 9) && (g_nbrs[1] == 9)))
+	{
+		ft_putcomb();
+		g_nbrs[3]++;
+		if ((g_nbrs[3] = g_nbrs[3] % 10) == 0)
+		{
+			g_nbrs[2]++;
+		}
+		if (g_nbrs[2] == 10)
+		{
+			g_nbrs[2] = g_nbrs[0];
+			g_nbrs[1]++;
+		}
+		if ((g_nbrs[1] = g_nbrs[1] % 10) == 0)
+		{
+			g_nbrs[0]++;
+		}
+		g_nbrs[3] = g_nbrs[1]++;
+	}
+}

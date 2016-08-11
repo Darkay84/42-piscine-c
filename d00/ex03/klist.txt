@@ -1,0 +1,5 @@
+Credentials cache: API:19110
+        Principal: bmalepla@42.FR
+
+  Issued                Expires               Principal
+Aug  1 13:06:31 2016  Aug  1 23:06:31 2016  krbtgt/42.FR@42.FR

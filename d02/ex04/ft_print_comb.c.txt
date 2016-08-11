@@ -1,0 +1,48 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/08/04 10:16:37 by bmalepla          #+#    #+#             */
+/*   Updated: 2016/08/08 11:56:02 by bmalepla         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int		ft_putchar(char c);
+
+int		g_nbrs[3] = {48, 48, 58};
+
+void	ft_putcomb(void)
+{
+	ft_putchar(g_nbrs[0]);
+	ft_putchar(g_nbrs[1]);
+	ft_putchar(g_nbrs[2]);
+	if (g_nbrs[0] < 55)
+	{
+		ft_putchar(',');
+		ft_putchar(' ');
+	}
+}
+
+void	ft_print_comb(void)
+{
+	while ((g_nbrs[0]) <= 57)
+	{
+		if ((g_nbrs[0] < g_nbrs[1]) && (g_nbrs[1] < g_nbrs[2]))
+		{
+			ft_putcomb();
+		}
+		if (g_nbrs[1] == 58)
+		{
+			g_nbrs[1] = 48;
+			g_nbrs[0]++;
+		}
+		if (g_nbrs[2]++ >= 57)
+		{
+			g_nbrs[2] = 48;
+			g_nbrs[1]++;
+		}
+	}
+}
