@@ -61,7 +61,7 @@ char	*ft_format(char *str)
 
 int		main(int argc, char **argv)
 {
-	char	str[1000];
+	char	str[9001];
 	int		i;
 	int		j;
 	int		k;
