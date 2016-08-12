@@ -18,7 +18,8 @@
 # define SAVE_AUSTIN_POWERS "lololol";
 
 
-typedef struct {
+typedef struct
+{
     char	*name;
     float	life;
     int		age;

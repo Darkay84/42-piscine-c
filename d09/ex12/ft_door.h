@@ -22,10 +22,9 @@
 
 typedef int t_ft_bool;
 
-typedef structs_door
+typedef struct t_door
 {
-    instate;
-    t_door;
+    int state;
 }
 
 void open_door(t_door *door);
