@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/11 16:19:35 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/11 16:43:13 by bmalepla         ###   ########.fr       */
+/*   Created: 2014/08/05 13:47:00 by dda-silv          #+#    #+#             */
+/*   Updated: 2014/08/05 14:13:06 by dda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_find_next_prime(int nb)
-{
-	int c;
+#include <stdio.h>
 
-	if (nb <= 1)
-		return (2);
-	while (1)
-	{
-		c = 2;
-		while (nb % c != 0)
-		{
-			c++;
-		}
-		if (c == nb)
-			return (nb);
-		else
-			nb++;
-	}
-	return (0);
+int		ft_eight_queens_puzzle(void);
+
+int		main(void)
+{
+    printf("Your programe says that there are %i combinations.\n", ft_eight_queens_puzzle());
+    return (0);
 }

@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/11 16:19:35 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/11 16:43:13 by bmalepla         ###   ########.fr       */
+/*   Created: 2016/08/18 09:31:10 by bmalepla          #+#    #+#             */
+/*   Updated: 2016/08/18 14:47:18 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_find_next_prime(int nb)
+int	ft_str_is_alpha(char *str)
 {
-	int c;
-
-	if (nb <= 1)
-		return (2);
-	while (1)
+	while (*str != 0)
 	{
-		c = 2;
-		while (nb % c != 0)
-		{
-			c++;
-		}
-		if (c == nb)
-			return (nb);
-		else
-			nb++;
+		if (!((*str <= 90 && *str >= 65) || (*str >= 97 && *str <= 122)))
+			return (0);
+		str++;
 	}
-	return (0);
+	return (1);
 }

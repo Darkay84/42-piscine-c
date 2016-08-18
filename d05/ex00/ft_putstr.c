@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/11 16:19:35 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/11 16:43:13 by bmalepla         ###   ########.fr       */
+/*   Created: 2016/08/16 11:32:10 by bmalepla          #+#    #+#             */
+/*   Updated: 2016/08/16 11:35:17 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_find_next_prime(int nb)
-{
-	int c;
+void	ft_putchar(char c);
 
-	if (nb <= 1)
-		return (2);
-	while (1)
+void	ft_putstr(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
 	{
-		c = 2;
-		while (nb % c != 0)
-		{
-			c++;
-		}
-		if (c == nb)
-			return (nb);
-		else
-			nb++;
+		ft_putchar(str[i]);
+		i++;
 	}
-	return (0);
 }

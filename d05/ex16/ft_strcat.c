@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/11 16:19:35 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/11 16:43:13 by bmalepla         ###   ########.fr       */
+/*   Created: 2016/08/18 17:18:29 by bmalepla          #+#    #+#             */
+/*   Updated: 2016/08/18 17:18:30 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_find_next_prime(int nb)
+char *ft_strcat(char *dest, char *src)
 {
-	int c;
+    char *c;
+    char *d;
+    
+    c = dest;
+    d = (char *)src;
 
-	if (nb <= 1)
-		return (2);
-	while (1)
-	{
-		c = 2;
-		while (nb % c != 0)
-		{
-			c++;
-		}
-		if (c == nb)
-			return (nb);
-		else
-			nb++;
-	}
-	return (0);
+    while (*c != '\0')
+        c++;
+    while (*d != '\0')
+    {
+        *c= *d;
+        c++;
+        d++;
+    }
+    *c = '\0';
+    return (dest);
 }

@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/11 16:19:35 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/11 16:43:13 by bmalepla         ###   ########.fr       */
+/*   Created: 2016/08/18 08:24:29 by bmalepla          #+#    #+#             */
+/*   Updated: 2016/08/18 08:32:05 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_find_next_prime(int nb)
+char	*ft_strupcase(char *str)
 {
-	int c;
+	int i;
 
-	if (nb <= 1)
-		return (2);
-	while (1)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		c = 2;
-		while (nb % c != 0)
-		{
-			c++;
-		}
-		if (c == nb)
-			return (nb);
-		else
-			nb++;
+		if (str[i] < 123 && str[i] > 96)
+			str[i] -= 32;
+		i++;
 	}
-	return (0);
+	return (str);
 }

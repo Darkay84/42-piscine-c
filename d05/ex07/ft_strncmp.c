@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/11 16:19:35 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/11 16:43:13 by bmalepla         ###   ########.fr       */
+/*   Created: 2016/08/18 07:58:34 by bmalepla          #+#    #+#             */
+/*   Updated: 2016/08/18 08:16:31 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_find_next_prime(int nb)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int c;
+	int i;
 
-	if (nb <= 1)
-		return (2);
-	while (1)
+	i = 0;
+	if (n < 1)
+		return (0);
+	while ((s1[i] == s2[i]) && s1[i] != '\0' && s2[i] != '\0' && i < n)
 	{
-		c = 2;
-		while (nb % c != 0)
-		{
-			c++;
-		}
-		if (c == nb)
-			return (nb);
-		else
-			nb++;
+		i++;
 	}
-	return (0);
+	if (i == n)
+	{
+		return (*(s1 - 1) - *(s2 - 1));
+	}
+	return ((int)(s1[i] - s2[i]));
 }
