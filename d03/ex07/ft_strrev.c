@@ -6,29 +6,28 @@
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 12:23:16 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/10 11:58:14 by bmalepla         ###   ########.fr       */
+/*   Updated: 2016/08/11 08:34:27 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strrev(char *str)
 {
-    int i;
-    int j;
-    char swp;
-    
-    i = 0;
-    j = 0;
-    while (str[j])
-    {
-        j++;
-    }
-    j--;
-    while (i < j)
-    {
-        swp = str[j];
-        str[j] = str[i];
-        str[i] = swp;
-        j++;
-    }
-    return (str);
+	char	swp;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	while (str[j])
+	{
+		j++;
+	}
+	while (i < j / 2)
+	{
+		swp = str[i];
+		str[i] = str[j - i - 1];
+		str[j - i - 1] = swp;
+		i++;
+	}
+	return (str);
 }

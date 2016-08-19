@@ -6,7 +6,7 @@
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/10 09:20:35 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/10 13:41:49 by bmalepla         ###   ########.fr       */
+/*   Updated: 2016/08/11 09:01:30 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ void	ft_sort_integer_table(int *tab, int size)
 			{
 				if (tab[g_i] > tab[g_j])
 				{
-					ft_swap();
+					g_swp = tab[g_i];
+					tab[g_i] = tab[g_j];
+					tab[g_j] = g_swp;
+					g_j--;
 				}
 				g_j++;
 			}
@@ -35,12 +38,4 @@ void	ft_sort_integer_table(int *tab, int size)
 			g_i++;
 		}
 	}
-}
-
-void	ft_swap(void)
-{
-	g_swp = tab[g_i];
-	tab[g_i] = tab[g_j];
-	tab[g_j] = g_swp;
-	g_j--;
 }

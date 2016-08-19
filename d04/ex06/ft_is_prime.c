@@ -6,28 +6,28 @@
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/11 12:22:19 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/11 12:22:22 by bmalepla         ###   ########.fr       */
+/*   Updated: 2016/08/19 09:51:06 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_is_prime(int nb)
+int	ft_is_prime(int nb)
 {
-    int c;
-    
-    c = 3;
-    if (nb <= 1)
-        return (0);
-    if (nb == 2 || nb == 3)
-        return(1);
-    if (nb % 2 == 0 || nb % 3 == 0)
-        return (0);
-    while ((c * c) <= nb)
-    {
-        if ((nb % c) == 0)
-            return (0);
-        c ++;
-        if (c == nb)
-            return (1);
-    }
-    return (1);
+	int c;
+
+	c = 3;
+	if (nb <= 1)
+		return (0);
+	if (nb == 2 || nb == 3)
+		return (1);
+	if (nb % 2 == 0 || nb % 3 == 0)
+		return (0);
+	while ((c * c) <= nb)
+	{
+		if ((nb % c) == 0)
+			return (0);
+		c++;
+		if (c == nb)
+			return (1);
+	}
+	return (1);
 }

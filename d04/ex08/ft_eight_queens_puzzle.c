@@ -6,16 +6,18 @@
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/16 18:59:25 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/16 18:59:35 by bmalepla         ###   ########.fr       */
+/*   Updated: 2016/08/19 09:52:54 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_eight_queens_puzzle(void)
+int	frt_eight_queens_puzzle(void)
 {
-	int i = 0;
+	int i;
+
+	i = 0;
 	while (i < 92)
 	{
-        i++;
+		i++;
 	}
 	return (i);
 }
