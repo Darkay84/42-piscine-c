@@ -1,21 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/22 10:34:42 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/22 10:34:58 by bmalepla         ###   ########.fr       */
+/*   Created: 2016/08/22 14:09:11 by bmalepla          #+#    #+#             */
+/*   Updated: 2016/08/22 18:24:08 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+void	ft_putchar(char c);
+
+void	ft_putstr(char *str)
+{
+	while (*str)
+	{
+		ft_putchar(*str);
+		str++;
+	}
+}
+
+int		main(int argc, char **argv)
 {
 	int i;
 
-	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && s1[i] == s2[i])
+	i = 1;
+	if (argc)
+		i = 1;
+	while (argv[i] != '\0')
+	{
+		ft_putstr(argv[i]);
+		ft_putchar('\n');
 		i++;
-	return ((char)s1[i] - (char)s2[i]);
+	}
+	return (0);
 }
