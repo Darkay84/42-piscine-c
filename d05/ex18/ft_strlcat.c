@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/18 21:21:43 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/18 21:59:42 by bmalepla         ###   ########.fr       */
+/*   Created: 2016/08/21 22:41:45 by bmalepla          #+#    #+#             */
+/*   Updated: 2016/08/21 22:46:45 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, int nb)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	char *c;
-	char *d;
+	unsigned int	i;
+	int				j;
+	int				rtrn_sz;
 
-	c = dest;
-	d = (char *)src;
-	while (*c != '\0')
-		c++;
-	while (*d != '\0' && nb > 0)
+	i = 0;
+	j = 0;
+	rtrn_sz = 0;
+	while (src[rtrn_sz] != '\0')
+		rtrn_sz++;
+	while (dest[i] != '\0')
+		i++;
+	while (*src != '\0' && j < size)
 	{
-		*c = *d;
-		c++;
-		d++;
-		nb--;
+		dest[i + j] = *src;
+		src++;
+		j++;
 	}
-	*c = '\0';
-	return (dest);
+	dest[i + j] = '\0';
+	return (rtrn_sz + size);
 }

@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/18 21:21:43 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/18 21:59:42 by bmalepla         ###   ########.fr       */
+/*   Created: 2016/08/21 23:11:50 by bmalepla          #+#    #+#             */
+/*   Updated: 2016/08/22 00:02:27 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, int nb)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	char *c;
-	char *d;
+	unsigned int	i;
 
-	c = dest;
-	d = (char *)src;
-	while (*c != '\0')
-		c++;
-	while (*d != '\0' && nb > 0)
+	i = 0;
+	while (src[i] != '\0')
 	{
-		*c = *d;
-		c++;
-		d++;
-		nb--;
+		if (i < size - 1)
+			dest[i] = src[i];
+		i++;
 	}
-	*c = '\0';
-	return (dest);
+	dest[i] = '\0';
+	return (i);
 }

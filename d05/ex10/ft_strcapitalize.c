@@ -6,7 +6,7 @@
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 08:40:43 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/18 14:56:09 by bmalepla         ###   ########.fr       */
+/*   Updated: 2016/08/21 20:50:25 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@ char	*ft_strcapitalize(char *str)
 {
 	int i;
 
+	i = 0;
 	if (str[0] > 96 && str[0] < 123)
 		str[i] -= 32;
 	i = 1;
@@ -28,7 +29,7 @@ char	*ft_strcapitalize(char *str)
 	{
 		if ((str[i - 1] > 122 || str[i - 1] < 97)
 				&& (str[i - 1] > 90 || str[i - 1] < 65) && (str[i - 1] > 57
-				|| str[i - 1] < 48) && (str[i] < 123 && str[i] > 96))
+					|| str[i - 1] < 48) && (str[i] < 123 && str[i] > 96))
 			str[i] -= 32;
 		else if ((str[i - 1] > 122 || str[i - 1] < 97)
 				&& str[i] > 64 && str[i] < 91)

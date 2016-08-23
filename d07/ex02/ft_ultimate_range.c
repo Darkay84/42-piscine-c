@@ -6,29 +6,29 @@
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 19:31:28 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/22 19:31:29 by bmalepla         ###   ########.fr       */
+/*   Updated: 2016/08/23 09:34:22 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_ultimate_range(int **range, int min, int max)
+int	ft_ultimate_range(int **range, int min, int max)
 {
-    int i;
-    int *tbl;
-    
-    i = 0;
-    if (min >= max)
-    {
-        *range = 0;
-        return (0);
-    }
-    tbl = (int*)malloc(sizeof(*tbl) * (max - min));
-    if (tbl == NULL)
-        return (0);
-    while (min < max)
-    {
-        tbl[i] = min;
-        min++;
-        i++;
-    }
-    return (tbl);
+	int i;
+	int *tbl;
+
+	i = 0;
+	if (min >= max)
+	{
+		*range = 0;
+		return (0);
+	}
+	tbl = (int*)malloc(sizeof(*tbl) * (max - min));
+	if (tbl == NULL)
+		return (0);
+	while (min < max)
+	{
+		tbl[i] = min;
+		min++;
+		i++;
+	}
+	return (tbl);
 }

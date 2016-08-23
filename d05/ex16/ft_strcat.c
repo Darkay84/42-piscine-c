@@ -6,26 +6,25 @@
 /*   By: bmalepla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 17:18:29 by bmalepla          #+#    #+#             */
-/*   Updated: 2016/08/18 17:18:30 by bmalepla         ###   ########.fr       */
+/*   Updated: 2016/08/18 21:58:21 by bmalepla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
-    char *c;
-    char *d;
-    
-    c = dest;
-    d = (char *)src;
+	char *c;
+	char *d;
 
-    while (*c != '\0')
-        c++;
-    while (*d != '\0')
-    {
-        *c= *d;
-        c++;
-        d++;
-    }
-    *c = '\0';
-    return (dest);
+	c = dest;
+	d = (char *)src;
+	while (*c != '\0')
+		c++;
+	while (*d != '\0')
+	{
+		*c = *d;
+		c++;
+		d++;
+	}
+	*c = '\0';
+	return (dest);
 }
