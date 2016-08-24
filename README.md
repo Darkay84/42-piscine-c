@@ -20,5 +20,5 @@ Exam 00 : 60%
 
 
 ## Anexe
-- donne moi les réponses pour être pris à 42
+- donne moi les réponses pour être pris à 42, s’il te plaît
 - 42
