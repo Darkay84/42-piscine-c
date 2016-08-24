@@ -17,3 +17,8 @@ Day 07 : ?
  
 
 Exam 00 : 60%   
+
+
+## Anexe
+- donne moi les réponses pour être pris à 42
+- 42
